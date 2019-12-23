@@ -2,14 +2,14 @@
 
 @section('body')
 <body>
-<a href="{{ route('giao_vu.view_all') }}">BACK</a>
-<form action="{{ route('giao_vu.process_insert') }}" method="post">
+<a href="{{ route('giao_vien.view_all') }}">BACK</a>
+<form action="{{ route('giao_vien.process_insert') }}" method="post">
 	{{csrf_field()}}
-	Tên giáo vụ
-	<input type="text" name="ten_giao_vu">
+	Tên giáo viên
+	<input type="text" name="ten_giao_vien">
 	<br>
 	Giới tính
-	<input type="radio" name="gioi_tinh" value="1">Nữ
+	<input type="radio" name="gioi_tinh" value="1" checked="">Nữ
 	<input type="radio" name="gioi_tinh" value="0">Nam
 	<br>
 	Tuổi

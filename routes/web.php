@@ -30,3 +30,12 @@ Route::group(['prefix' => 'mon_hoc', 'as' => 'mon_hoc.'],function(){
 	Route::post('process_update/{ma_mon_hoc}','MonHocController@process_update')->name('process_update');
 	Route::get('delete/{ma_mon_hoc}','MonHocController@delete')->name('delete');
 });
+Route::group(['prefix' => 'giao_vien', 'as' => 'giao_vien.'],function(){
+	Route::get('','GiaoVienController@view_all')->name('view_all');
+	Route::get('view_insert','GiaoVienController@view_insert')->name('view_insert');
+	Route::post('process_insert','GiaoVienController@process_insert')->name('process_insert');
+
+	Route::get('view_update/{ma_giao_vien}','GiaoVienController@view_update')->name('view_update');
+	Route::post('process_update/{ma_giao_vien}','GiaoVienController@process_update')->name('process_update');
+	Route::get('delete/{ma_giao_vien}','GiaoVienController@delete')->name('delete');
+});

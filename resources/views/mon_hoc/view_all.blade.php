@@ -1,8 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-</head>
+@extends('layer.master')
+
+@section('body')
 <body>
 <a href="{{ route('mon_hoc.view_insert') }}">
 	Thêm
@@ -31,5 +29,4 @@
 		</tr>
 	@endforeach
 </table>
-</body>
-</html>
+@endsection

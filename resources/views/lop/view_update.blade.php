@@ -1,9 +1,8 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-</head>
+@extends('layer.master')
+
+@section('body')
 <body>
+<a href="{{ route('lop.view_all') }}">BACK</a>
 <form action="{{ route('lop.process_update',['ma_lop' => $each->ma_lop]) }}" method="post">
 	{{csrf_field()}}
 	Tên lớp
@@ -11,5 +10,4 @@
 	<br>
 	<button>Sửa</button>
 </form>
-</body>
-</html>
+@endsection

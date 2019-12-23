@@ -1,4 +1,4 @@
-	<div class="sidebar" data-color="orange" data-image="../assets/img/full-screen-image-3.jpg">
+	<div class="sidebar" data-color="orange">
         <!--
 
             Tip 1: you can change the color of the sidebar using: data-color="blue | azure | green | orange | red | purple"
@@ -14,15 +14,13 @@
 			<a href="http://www.creative-tim.com" class="simple-text logo-normal">
 				Creative Tim
 			</a>
-        </div>
+        </div>x
 
     	<div class="sidebar-wrapper">
             <div class="user">
 				<div class="info">
 					<div class="photo">
-	                    <img src="../assets/img/default-avatar.png" />
 	                </div>
-
 					<a data-toggle="collapse" href="#collapseExample" class="collapsed">
 						<span>
 							Tania Andrew
@@ -220,12 +218,6 @@
 						</ul>
 					</div>
 				</li>
-				<li class="active">
-                    <a href="charts.html">
-                        <i class="pe-7s-graph1"></i>
-                        <p>Charts</p>
-                    </a>
-                </li>
 
                 <li>
                     <a href="calendar.html">

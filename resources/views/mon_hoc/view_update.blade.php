@@ -1,9 +1,8 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-</head>
+@extends('layer.master')
+
+@section('body')
 <body>
+<a href="{{ route('mon_hoc.view_all') }}">BACK</a>
 <form action="{{ route('mon_hoc.process_update',['ma_mon_hoc' => $each->ma_mon_hoc]) }}" method="post">
 	{{csrf_field()}}
 	Tên môn học
@@ -11,5 +10,4 @@
 	<br>
 	<button>Sửa</button>
 </form>
-</body>
-</html>
+@endsection

@@ -24,103 +24,23 @@
     <!--     Fonts and icons     -->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
-    <link href="../assets/css/pe-icon-7-stroke.css" rel="stylesheet" />
 
 </head>
 <body>
 
 <div class="wrapper">
-	@include('layer.menu');
+	@include('layer.menu')
 
-  	@include('layer.head');
+  	@include('layer.head')
 
         <div class="main-content">
             <div class="container-fluid">
 
                 <div class="row">
-                    <div class="col-md-6">
-                        <div class="card">
-                            <div class="header">
-                                24 Hours Performance
-                                <p class="category">Line Chart</p>
-                            </div>
-                            <div class="content">
-                                <div id="chartPerformance" class="ct-chart "></div>
-                            </div>
-                        </div>
-                    </div>
+                    <div class="col-md-10 col-md-offset-1">
 
-                    <div class="col-md-6">
-                        <div class="card">
-                            <div class="header">
-                                NASDAQ: AAPL
-                                <p class="category">Line Chart with Points</p>
-                            </div>
                             <div class="content">
-                                <div id="chartStock" class="ct-chart "></div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="card">
-                            <div class="header">
-                                Users Behavior
-                                <p class="category">Multiple Lines Charts</p>
-                            </div>
-                            <div class="content">
-                                <div id="chartBehaviour" class="ct-chart "></div>
-                            </div>
-                            <div class="footer">
-                                <h6>Legend</h6>
-                                 <i class="fa fa-circle text-info"></i> Visited Site
-                                 <i class="fa fa-circle text-danger"></i> Register
-                                 <i class="fa fa-circle text-warning"></i> Login 2nd time
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6">
-                        <div class="card">
-                            <div class="header">
-                                Public Preferences
-                                <p class="category">Pie Chart</p>
-                            </div>
-                            <div class="content">
-                                <div id="chartPreferences" class="ct-chart "></div>
-                            </div>
-                            <div class="footer">
-                                <h6>Legend</h6>
-                                 <i class="fa fa-circle text-info"></i> Apple
-                                 <i class="fa fa-circle text-warning"></i> Samsung
-                                 <i class="fa fa-circle text-danger"></i> Windows Phone
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="card">
-                            <div class="header">
-                                Views
-                                <p class="category">Bar Chart</p>
-                            </div>
-                            <div class="content">
-                                <div id="chartViews" class="ct-chart "></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6">
-                        <div class="card">
-                            <div class="header">
-                                Activity
-                                <p class="category">Multiple Bars Chart</p>
-                            </div>
-                            <div class="content">
-                                <div id="chartActivity" class="ct-chart "></div>
+                                @yield('body')
                             </div>
                         </div>
                     </div>
@@ -129,71 +49,19 @@
             </div>
         </div>
 
-  			@include('layer.foot');
+  			@include('layer.foot')
     </div>
 </div>
 
 
 </body>
 <!--   Core JS Files  -->
-    <script src="../assets/js/jquery.min.js" type="text/javascript"></script>
-	<script src="../assets/js/bootstrap.min.js" type="text/javascript"></script>
-	<script src="../assets/js/perfect-scrollbar.jquery.min.js" type="text/javascript"></script>
+    <script src="{{ asset('js/jquery.min.js')}}"></script>
+	<script src="{{ asset('js/bootstrap.min.js')}}"></script>
+	<script src="{{ asset('js/perfect-scrollbar.jquery.min.js')}}" type="text/javascript"></script>
 
-
-	<!--  Forms Validations Plugin -->
-	<script src="../assets/js/jquery.validate.min.js"></script>
-
-	<!--  Plugin for Date Time Picker and Full Calendar Plugin-->
-	<script src="../assets/js/moment.min.js"></script>
-
-    <!--  Date Time Picker Plugin is included in this js file -->
-    <script src="../assets/js/bootstrap-datetimepicker.min.js"></script>
-
-    <!--  Select Picker Plugin -->
-    <script src="../assets/js/bootstrap-selectpicker.js"></script>
-
-	<!--  Checkbox, Radio, Switch and Tags Input Plugins -->
-		<script src="../assets/js/bootstrap-switch-tags.min.js"></script>
-
-	<!--  Charts Plugin -->
-	<script src="../assets/js/chartist.min.js"></script>
-
-    <!--  Notifications Plugin    -->
-    <script src="../assets/js/bootstrap-notify.js"></script>
-
-    <!-- Sweet Alert 2 plugin -->
-	<script src="../assets/js/sweetalert2.js"></script>
-
-    <!-- Vector Map plugin -->
-	<script src="../assets/js/jquery-jvectormap.js"></script>
-
-    <!--  Google Maps Plugin    -->
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
-
-	<!-- Wizard Plugin    -->
-    <script src="../assets/js/jquery.bootstrap.wizard.min.js"></script>
-
-    <!--  Bootstrap Table Plugin    -->
-    <script src="../assets/js/bootstrap-table.js"></script>
-
-	<!--  Plugin for DataTables.net  -->
-    <script src="../assets/js/jquery.datatables.js"></script>
-
-
-    <!--  Full Calendar Plugin    -->
-    <script src="../assets/js/fullcalendar.min.js"></script>
 
     <!-- Light Bootstrap Dashboard Core javascript and methods -->
-	<script src="../assets/js/light-bootstrap-dashboard.js?v=1.4.1"></script>
-
-	<!-- Light Bootstrap Dashboard DEMO methods, don't include it in your project! -->
-	<script src="../assets/js/demo.js"></script>
-
-    <script>
-        $().ready(function(){
-            demo.initCharts();
-        });
-    </script>
+	<script src="{{ asset('js/light-bootstrap-dashboard.js')}}"></script>
 
 </html>

@@ -2,11 +2,11 @@
 
 @section('body')
 <body>
-<a href="{{ route('giao_vu.view_all') }}">BACK</a>
-<form action="{{ route('giao_vu.process_update',['ma_giao_vu' => $each->ma_giao_vu]) }}" method="post">
+<a href="{{ route('giao_vien.view_all') }}">BACK</a>
+<form action="{{ route('giao_vien.process_update',['ma_giao_vien' => $each->ma_giao_vien]) }}" method="post">
 	{{csrf_field()}}
-	Tên giáo vụ
-	<input type="text" name="ten_giao_vu" value="{{$each->ten_giao_vu}}">
+	Tên giáo viên
+	<input type="text" name="ten_giao_vien" value="{{$each->ten_giao_vien}}">
 	<br>
 	Giới tính
 	<input type="boolean" name="gioi_tinh" value="{{$each->gioi_tinh}}">

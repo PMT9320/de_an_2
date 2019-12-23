@@ -1,4 +1,5 @@
 <?php  
+Route::get('test','GiaoVuController@test');
 
 Route::group(['prefix' => 'giao_vu', 'as' => 'giao_vu.'],function(){
 	Route::get('','GiaoVuController@view_all')->name('view_all');

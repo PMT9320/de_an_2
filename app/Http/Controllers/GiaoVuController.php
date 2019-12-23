@@ -58,5 +58,8 @@ class GiaoVuController
 			return "Nu";
 		}
 	}
-	
+	function test()
+	{
+		return view('layer.master');
+	}
 }

@@ -30,106 +30,25 @@
 <body>
 
 <div class="wrapper">
-	@include('layer.menu');
+	@include('layer.menu')
 
-  	@include('layer.head');
+  	@include('layer.head')
 
         <div class="main-content">
             <div class="container-fluid">
-
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="card">
-                            <div class="header">
-                                24 Hours Performance
-                                <p class="category">Line Chart</p>
-                            </div>
-                            <div class="content">
-                                <div id="chartPerformance" class="ct-chart "></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6">
-                        <div class="card">
-                            <div class="header">
-                                NASDAQ: AAPL
-                                <p class="category">Line Chart with Points</p>
-                            </div>
-                            <div class="content">
-                                <div id="chartStock" class="ct-chart "></div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="card">
-                            <div class="header">
-                                Users Behavior
-                                <p class="category">Multiple Lines Charts</p>
-                            </div>
-                            <div class="content">
-                                <div id="chartBehaviour" class="ct-chart "></div>
-                            </div>
-                            <div class="footer">
-                                <h6>Legend</h6>
-                                 <i class="fa fa-circle text-info"></i> Visited Site
-                                 <i class="fa fa-circle text-danger"></i> Register
-                                 <i class="fa fa-circle text-warning"></i> Login 2nd time
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6">
-                        <div class="card">
-                            <div class="header">
-                                Public Preferences
-                                <p class="category">Pie Chart</p>
-                            </div>
-                            <div class="content">
-                                <div id="chartPreferences" class="ct-chart "></div>
-                            </div>
-                            <div class="footer">
-                                <h6>Legend</h6>
-                                 <i class="fa fa-circle text-info"></i> Apple
-                                 <i class="fa fa-circle text-warning"></i> Samsung
-                                 <i class="fa fa-circle text-danger"></i> Windows Phone
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="card">
-                            <div class="header">
-                                Views
-                                <p class="category">Bar Chart</p>
-                            </div>
-                            <div class="content">
-                                <div id="chartViews" class="ct-chart "></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6">
-                        <div class="card">
-                            <div class="header">
-                                Activity
-                                <p class="category">Multiple Bars Chart</p>
-                            </div>
-                            <div class="content">
-                                <div id="chartActivity" class="ct-chart "></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
+            	<div class="row">
+            		<div class="col-md-10 col-md-offset-1">
+            			<div class="card card-calendar">
+            				<div class="content">
+            					@yield('body')
+            				</div>		
+            			</div>		
+            		</div>	
+            	</div>
             </div>
         </div>
 
-  			@include('layer.foot');
+  			@include('layer.foot')
     </div>
 </div>
 

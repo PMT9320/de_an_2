@@ -1,9 +1,5 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-</head>
-<body>
+@extends('layer.master')
+@section('body')
 <a href="{{ route('giao_vu.view_insert') }}">
 	Thêm
 </a>
@@ -36,5 +32,4 @@
 		</tr>
 	@endforeach
 </table>
-</body>
-</html>
+@endsection

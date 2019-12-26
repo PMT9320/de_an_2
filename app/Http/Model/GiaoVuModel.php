@@ -29,11 +29,18 @@ class GiaoVuModel
 			$this->dia_chi
 		]);
 	}
-	static function get_one($ma_giao_vu){
-		$array = DB::select('select * from giao_vu where ma_giao_vu = ?',[
-			$ma_giao_vu
+	public function get_one_check_login(){
+		$array = DB::select('select * from giao_vu where email = ? and mat_khau = ?',[
+			$this->email,
+			$this->mat_khau,
 		]);
-		return $array[0];
+		return $array;
+	}
+	public function get_one(){
+		$array = DB::select('select * from giao_vu where ma = ?',[
+			$this->ma
+		]);
+		return $array;
 	}
 	public function update()
 	{

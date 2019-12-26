@@ -23,7 +23,11 @@
 	                </div>
 					<a data-toggle="collapse" href="#collapseExample" class="collapsed">
 						<span>
-							Tania Andrew
+							@foreach ($array as $each)
+								<tr>
+									<td>{{$each->ten_giao_vu}}</td>
+								</tr>
+							@endforeach
 	                        <b class="caret"></b>
 						</span>
                     </a>
@@ -41,13 +45,6 @@
 								<a href="#pablo">
 									<span class="sidebar-mini">EP</span>
 									<span class="sidebar-normal">Edit Profile</span>
-								</a>
-							</li>
-
-							<li>
-								<a href="#pablo">
-									<span class="sidebar-mini">S</span>
-									<span class="sidebar-normal">Settings</span>
 								</a>
 							</li>
 						</ul>

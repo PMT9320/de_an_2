@@ -2,8 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Foundation\Bus\DispatchesJobs;
+use Illuminate\Routing\Controller as BaseController;
+use Illuminate\Foundation\Validation\ValidatesRequests;
+use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
+
 use App\Http\Model\GiaoVuModel;
 use Illuminate\Http\Request;
+use session;
 
 class GiaoVuController
 {
@@ -27,6 +33,12 @@ class GiaoVuController
 		$giao_vu->insert();
 
 		 return redirect()->route("giao_vu.view_all");
+	}
+	function view_one(){
+		$ma_giao_vu = $rq->session()->get('ma_giao_vu');
+		$each = GiaoVuModel::get_one($ma_giao_vu);
+
+		return view('giao_vu.view_chi_tiet_giao_vu',compact('each'));
 	}
 	function view_update($ma_giao_vu)
 	{
@@ -58,8 +70,31 @@ class GiaoVuController
 			return "Nu";
 		}
 	}
-	function test()
-	{
-		return view('layer.master');
-	}
-}
+
+	public function login()
+    {
+    	return view('login');
+    }
+	public function process_login(Request $rq)
+    {
+		$giao_vu = new GiaoVuModel();
+		$giao_vu->email = $rq->get('email');
+		$giao_vu->mat_khau = $rq->get('mat_khau');
+		$array = $giao_vu->get_one_check_login();
+
+		if(count($array)==1){
+			$rq->session()->put('ma_giao_vu',$array[0]->ma_giao_vu);
+			$rq->session()->put('ten_giao_vu',$array[0]->ten_giao_vu);
+			$rq->session()->put('cap_do',0);
+
+			return redirect()->route('giao_vu.view_all');
+		}
+		else{
+			return redirect()->route('view_login')->with('error','Sai tên đăng nhập hoặc tài khoản');
+		}
+    }
+    public function logout(Request $rq)
+    {
+    	$rq->session()->flush();
+		return redirect()->route('view_login')->with('success','Đăng xuất thành công');
+    }}

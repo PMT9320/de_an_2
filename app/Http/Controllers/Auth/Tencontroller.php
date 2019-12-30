@@ -15,4 +15,3 @@ class Controller extends BaseController
     	return view('kiem_tra','');
     }
 }
-}

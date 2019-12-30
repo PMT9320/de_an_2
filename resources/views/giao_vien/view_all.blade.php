@@ -6,7 +6,6 @@
 </a>
 <table border="1" width="100%">
 	<tr>
-		<th>Mã giáo viên</th>
 		<th>Tên giáo viên</th>
 		<th>Giới tính</th>
 		<th>Tuổi</th>
@@ -17,7 +16,6 @@
 	</tr>
 	@foreach ($array as $each)
 		<tr>
-			<td>{{$each->ma_giao_vien}}</td>
 			<td>{{$each->ten_giao_vien}}</td>
 			<td>
 				@if ($each->gioi_tinh==1)

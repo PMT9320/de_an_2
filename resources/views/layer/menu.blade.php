@@ -3,19 +3,7 @@
 
             Tip 1: you can change the color of the sidebar using: data-color="blue | azure | green | orange | red | purple"
             Tip 2: you can also add an image using data-image tag
-
         -->
-
-        <div class="logo">
-            <a href="http://www.creative-tim.com" class="simple-text logo-mini">
-                Ct
-            </a>
-
-			<a href="http://www.creative-tim.com" class="simple-text logo-normal">
-				Creative Tim
-			</a>
-        </div>x
-
     	<div class="sidebar-wrapper">
             <div class="user">
 				<div class="info">
@@ -23,31 +11,16 @@
 	                </div>
 					<a data-toggle="collapse" href="#collapseExample" class="collapsed">
 						<span>
-							Nguyễn Thị Hồng Hạnh
-	                        <b class="caret"></b>
+							{{Session::get('ten_giao_vu')}}	                        <b class="caret"></b>
 						</span>
                     </a>
 
 					<div class="collapse" id="collapseExample">
 						<ul class="nav">
 							<li>
-								<a href="#pablo">
-									<span class="sidebar-mini">MP</span>
-									<span class="sidebar-normal">My Profile</span>
-								</a>
-							</li>
-
-							<li>
-								<a href="#pablo">
+								<a href="{{ route('giao_vu.view_one') }}">
 									<span class="sidebar-mini">EP</span>
 									<span class="sidebar-normal">Edit Profile</span>
-								</a>
-							</li>
-
-							<li>
-								<a href="#pablo">
-									<span class="sidebar-mini">S</span>
-									<span class="sidebar-normal">Settings</span>
 								</a>
 							</li>
 						</ul>
@@ -57,16 +30,9 @@
 
 			<ul class="nav">
 				<li>
-					<a href="dashboard.html">
-						<i class="pe-7s-graph"></i>
-						<p>Quản lí giáo vụ</p>
-					</a>
-				</li>
-				<li>
-					<a data-toggle="collapse" href="#componentsExamples">
+				<li>					<a data-toggle="collapse" href="#componentsExamples">
                         <i class="pe-7s-plugin"></i>
-                        <p>Quản lí giáo viên
-                           <b class="caret"></b>
+                        <p>Components                           <b class="caret"></b>
                         </p>
                     </a>
 					<div class="collapse" id="componentsExamples">
@@ -119,8 +85,7 @@
 				<li>
 					<a data-toggle="collapse" href="#formsExamples">
                         <i class="pe-7s-note2"></i>
-                        <p>Quản lí lớp
-                           <b class="caret"></b>
+                        <p>Forms                           <b class="caret"></b>
                         </p>
                     </a>
 					<div class="collapse" id="formsExamples">
@@ -155,8 +120,7 @@
 				<li>
 					<a data-toggle="collapse" href="#tablesExamples">
                         <i class="pe-7s-news-paper"></i>
-                        <p>Quản lí môn học
-                           <b class="caret"></b>
+                        <p>Tables                           <b class="caret"></b>
                         </p>
                     </a>
 					<div class="collapse" id="tablesExamples">
@@ -191,8 +155,7 @@
 				<li>
 					<a data-toggle="collapse" href="#mapsExamples">
                         <i class="pe-7s-map-marker"></i>
-                        <p>Quản lí sinh viên
-                           <b class="caret"></b>
+                        <p>Maps                           <b class="caret"></b>
                         </p>
                     </a>
 					<div class="collapse" id="mapsExamples">
@@ -221,8 +184,7 @@
 				<li>
 					<a data-toggle="collapse" href="#pagesExamples">
                         <i class="pe-7s-gift"></i>
-                        <p>Phân công giảng dạy
-                           <b class="caret"></b>
+                        <p>Pages                           <b class="caret"></b>
                         </p>
                     </a>
 					<div class="collapse" id="pagesExamples">

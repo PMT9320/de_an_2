@@ -1,5 +1,5 @@
 <foot class="foot">
-            <div class="container-fluid">
+            <div class="container">
                 <nav class="pull-left">
                     <ul>
                         <li>

@@ -58,8 +58,4 @@ class GiaoVienController
 			return "Nu";
 		}
 	}
-	function test()
-	{
-		return view('layer.master');
-	}
 }

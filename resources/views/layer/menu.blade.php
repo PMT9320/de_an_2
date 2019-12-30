@@ -1,4 +1,4 @@
-	<div class="sidebar" data-color="orange" data-image="../assets/img/full-screen-image-3.jpg">
+	<div class="sidebar" data-color="orange">
         <!--
 
             Tip 1: you can change the color of the sidebar using: data-color="blue | azure | green | orange | red | purple"
@@ -14,18 +14,16 @@
 			<a href="http://www.creative-tim.com" class="simple-text logo-normal">
 				Creative Tim
 			</a>
-        </div>
+        </div>x
 
     	<div class="sidebar-wrapper">
             <div class="user">
 				<div class="info">
 					<div class="photo">
-	                    <img src="../assets/img/default-avatar.png" />
 	                </div>
-
 					<a data-toggle="collapse" href="#collapseExample" class="collapsed">
 						<span>
-							Tania Andrew
+							Nguyễn Thị Hồng Hạnh
 	                        <b class="caret"></b>
 						</span>
                     </a>
@@ -61,13 +59,13 @@
 				<li>
 					<a href="dashboard.html">
 						<i class="pe-7s-graph"></i>
-						<p>Dashboard</p>
+						<p>Quản lí giáo vụ</p>
 					</a>
 				</li>
 				<li>
 					<a data-toggle="collapse" href="#componentsExamples">
                         <i class="pe-7s-plugin"></i>
-                        <p>Components
+                        <p>Quản lí giáo viên
                            <b class="caret"></b>
                         </p>
                     </a>
@@ -121,7 +119,7 @@
 				<li>
 					<a data-toggle="collapse" href="#formsExamples">
                         <i class="pe-7s-note2"></i>
-                        <p>Forms
+                        <p>Quản lí lớp
                            <b class="caret"></b>
                         </p>
                     </a>
@@ -157,7 +155,7 @@
 				<li>
 					<a data-toggle="collapse" href="#tablesExamples">
                         <i class="pe-7s-news-paper"></i>
-                        <p>Tables
+                        <p>Quản lí môn học
                            <b class="caret"></b>
                         </p>
                     </a>
@@ -193,7 +191,7 @@
 				<li>
 					<a data-toggle="collapse" href="#mapsExamples">
                         <i class="pe-7s-map-marker"></i>
-                        <p>Maps
+                        <p>Quản lí sinh viên
                            <b class="caret"></b>
                         </p>
                     </a>
@@ -220,23 +218,10 @@
 						</ul>
 					</div>
 				</li>
-				<li class="active">
-                    <a href="charts.html">
-                        <i class="pe-7s-graph1"></i>
-                        <p>Charts</p>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="calendar.html">
-                        <i class="pe-7s-date"></i>
-                        <p>Calendar</p>
-                    </a>
-                </li>
 				<li>
 					<a data-toggle="collapse" href="#pagesExamples">
                         <i class="pe-7s-gift"></i>
-                        <p>Pages
+                        <p>Phân công giảng dạy
                            <b class="caret"></b>
                         </p>
                     </a>

@@ -1,6 +1,5 @@
 @extends('layer.master')
-@section('body')
-<a href="{{ route('lop.view_insert') }}">
+@section('body')<a href="{{ route('lop.view_insert') }}">
 	Thêm
 </a>
 <table border="1" width="100%">
@@ -26,7 +25,4 @@
 			</td>
 		</tr>
 	@endforeach
-</table>
-</body>
-</html>
-@endsection
+</table>@endsection

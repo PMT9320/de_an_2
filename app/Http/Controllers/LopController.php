@@ -37,9 +37,4 @@ class LopController
 
 		return redirect()->route("lop.view_all");
 	}
-	function delete($ma_lop){
-		LopModel::delete($ma_lop);
-
-		 return redirect()->route("lop.view_all");
-	}
 }

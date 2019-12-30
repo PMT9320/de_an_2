@@ -30,9 +30,5 @@ class LopModel
 			$this->ma_lop
 		]);
 	}
-	static function delete($ma_lop){
-		DB::delete("delete from lop where ma_lop = ?",[
-			$ma_lop
-		]);
-	}
+	
 }

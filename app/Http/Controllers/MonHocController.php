@@ -37,9 +37,5 @@ class MonHocController
 
 		return redirect()->route("mon_hoc.view_all");
 	}
-	function delete($ma_mon_hoc){
-		MonHocModel::delete($ma_mon_hoc);
-
-		 return redirect()->route("mon_hoc.view_all");
-	}
+	
 }

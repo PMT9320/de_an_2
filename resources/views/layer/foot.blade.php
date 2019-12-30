@@ -1,4 +1,4 @@
-<footer class="footer">
+<foot class="foot">
             <div class="container-fluid">
                 <nav class="pull-left">
                     <ul>
@@ -28,4 +28,4 @@
                     &copy; <script>document.write(new Date().getFullYear())</script> <a href="http://www.creative-tim.com">Creative Tim</a>, made with love for a better web
                 </p>
             </div>
-        </footer>
+</foot>

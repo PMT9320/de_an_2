@@ -30,9 +30,5 @@ class MonHocModel
 			$this->ma_mon_hoc
 		]);
 	}
-	static function delete($ma_mon_hoc){
-		DB::delete("delete from mon_hoc where ma_mon_hoc = ?",[
-			$ma_mon_hoc
-		]);
-	}
+	
 }

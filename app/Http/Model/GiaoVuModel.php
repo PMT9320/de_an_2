@@ -36,11 +36,11 @@ class GiaoVuModel
 		]);
 		return $array;
 	}
-	public function get_one(){
-		$array = DB::select('select * from giao_vu where ma = ?',[
-			$this->ma
+	static function get_one($ma_giao_vu){
+		$array = DB::select('select * from giao_vu where ma_giao_vu = ?',[
+			$ma_giao_vu
 		]);
-		return $array;
+		return $array[0];
 	}
 	public function update()
 	{

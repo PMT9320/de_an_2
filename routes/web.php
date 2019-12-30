@@ -1,5 +1,5 @@
 <?php  
-Route::group(['middleware' => 'CheckLogin'],function(){
+Route::group(['middleware' => 'CheckGiaoVu'],function(){
 	Route::group(['prefix' => 'giao_vu', 'as' => 'giao_vu.'],function(){
 		Route::get('','GiaoVuController@view_all')->name('view_all');
 		Route::get('view_one','GiaoVuController@view_one')->name('view_one');

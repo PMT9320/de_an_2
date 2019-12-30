@@ -6,24 +6,20 @@
 </a>
 <table border="1" width="100%">
 	<tr>
-		<th>Mã giáo viên</th>
 		<th>Tên giáo viên</th>
 		<th>Giới tính</th>
 		<th>Tuổi</th>
 		<th>Email</th>
-		<th>Mật khẩu</th>
 		<th>Sđt</th>
 		<th>Địa chỉ</th>
 		<th>Sửa</th>
 	</tr>
 	@foreach ($array as $each)
 		<tr>
-			<td>{{$each->ma_giao_vien}}</td>
 			<td>{{$each->ten_giao_vien}}</td>
 			<td>{{$each->gioi_tinh}}</td>
 			<td>{{$each->tuoi}}</td>
 			<td>{{$each->email}}</td>
-			<td>{{$each->mat_khau}}</td>
 			<td>{{$each->sdt}}</td>
 			<td>{{$each->dia_chi}}</td>
 			<td>

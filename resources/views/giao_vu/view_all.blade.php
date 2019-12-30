@@ -7,7 +7,6 @@
 </a>
 <table border="1" width="100%">
 	<tr>
-		<th>Mã giáo vụ</th>
 		<th>Tên giáo vụ</th>
 		<th>Giới tính</th>
 		<th>Tuổi</th>
@@ -18,7 +17,6 @@
 	</tr>
 	@foreach ($array as $each)
 		<tr>
-			<td>{{$each->ma_giao_vu}}</td>
 			<td>{{$each->ten_giao_vu}}</td>
 			<td>{{$each->gioi_tinh}}</td>
 			<td>{{$each->tuoi}}</td>

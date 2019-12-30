@@ -5,7 +5,7 @@ namespace App\Http\Middleware;
 use Closure;
 
 
-class CheckLogin
+class CheckGiaoVu
 {
     /**
      * Handle an incoming request.

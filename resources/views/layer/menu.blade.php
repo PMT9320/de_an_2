@@ -3,19 +3,7 @@
 
             Tip 1: you can change the color of the sidebar using: data-color="blue | azure | green | orange | red | purple"
             Tip 2: you can also add an image using data-image tag
-
         -->
-
-        <div class="logo">
-            <a href="http://www.creative-tim.com" class="simple-text logo-mini">
-                Ct
-            </a>
-
-			<a href="http://www.creative-tim.com" class="simple-text logo-normal">
-				Creative Tim
-			</a>
-        </div>x
-
     	<div class="sidebar-wrapper">
             <div class="user">
 				<div class="info">
@@ -23,11 +11,7 @@
 	                </div>
 					<a data-toggle="collapse" href="#collapseExample" class="collapsed">
 						<span>
-							@foreach ($array as $each)
-								<tr>
-									<td>{{$each->ten_giao_vu}}</td>
-								</tr>
-							@endforeach
+							{{Session::get('ten_giao_vu')}}
 	                        <b class="caret"></b>
 						</span>
                     </a>
@@ -35,14 +19,7 @@
 					<div class="collapse" id="collapseExample">
 						<ul class="nav">
 							<li>
-								<a href="#pablo">
-									<span class="sidebar-mini">MP</span>
-									<span class="sidebar-normal">My Profile</span>
-								</a>
-							</li>
-
-							<li>
-								<a href="#pablo">
+								<a href="{{ route('giao_vu.view_one') }}">
 									<span class="sidebar-mini">EP</span>
 									<span class="sidebar-normal">Edit Profile</span>
 								</a>
@@ -54,15 +31,9 @@
 
 			<ul class="nav">
 				<li>
-					<a href="dashboard.html">
-						<i class="pe-7s-graph"></i>
-						<p>Dashboard</p>
-					</a>
-				</li>
-				<li>
 					<a data-toggle="collapse" href="#componentsExamples">
                         <i class="pe-7s-plugin"></i>
-                        <p>Components
+                        <p>Quản Lý Giáo Vụ
                            <b class="caret"></b>
                         </p>
                     </a>
@@ -116,7 +87,7 @@
 				<li>
 					<a data-toggle="collapse" href="#formsExamples">
                         <i class="pe-7s-note2"></i>
-                        <p>Forms
+                        <p>Quản Lý Giáo Viên
                            <b class="caret"></b>
                         </p>
                     </a>
@@ -152,7 +123,7 @@
 				<li>
 					<a data-toggle="collapse" href="#tablesExamples">
                         <i class="pe-7s-news-paper"></i>
-                        <p>Tables
+                        <p>Xem lịch giảng dậy
                            <b class="caret"></b>
                         </p>
                     </a>
@@ -188,7 +159,7 @@
 				<li>
 					<a data-toggle="collapse" href="#mapsExamples">
                         <i class="pe-7s-map-marker"></i>
-                        <p>Maps
+                        <p>Quản Lý Sinh Viên
                            <b class="caret"></b>
                         </p>
                     </a>
@@ -215,17 +186,10 @@
 						</ul>
 					</div>
 				</li>
-
-                <li>
-                    <a href="calendar.html">
-                        <i class="pe-7s-date"></i>
-                        <p>Calendar</p>
-                    </a>
-                </li>
 				<li>
 					<a data-toggle="collapse" href="#pagesExamples">
                         <i class="pe-7s-gift"></i>
-                        <p>Pages
+                        <p>Quản Lý Điểm Danh Học Sinh
                            <b class="caret"></b>
                         </p>
                     </a>

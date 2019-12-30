@@ -34,12 +34,6 @@ class GiaoVuController
 
 		 return redirect()->route("giao_vu.view_all");
 	}
-	function view_one(){
-		$ma_giao_vu = $rq->session()->get('ma_giao_vu');
-		$each = GiaoVuModel::get_one($ma_giao_vu);
-
-		return view('giao_vu.view_chi_tiet_giao_vu',compact('each'));
-	}
 	function view_update($ma_giao_vu)
 	{
 		$each = GiaoVuModel::get_one($ma_giao_vu);
@@ -61,16 +55,6 @@ class GiaoVuController
 
 		return redirect()->route("giao_vu.view_all");
 	}
-	static function ten_gioi_tinh()
-	{
-		if($gioi_tinh==0){
-			return "Nam";
-		}
-		else{
-			return "Nu";
-		}
-	}
-
 	public function login()
     {
     	return view('login');
@@ -93,6 +77,13 @@ class GiaoVuController
 			return redirect()->route('view_login')->with('error','Sai tên đăng nhập hoặc tài khoản');
 		}
     }
+	function view_one(Request $rq){
+		$ma_giao_vu = $rq->session()->get('ma_giao_vu');
+		$each = GiaoVuModel::get_one($ma_giao_vu);
+
+		return view('giao_vu.view_chi_tiet_giao_vu',compact('each'));
+	}
+
     public function logout(Request $rq)
     {
     	$rq->session()->flush();
